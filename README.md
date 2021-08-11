@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# React WC
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ReactでWebComponentsを使えるようにするサンプル
 
-## Available Scripts
+## input
 
-In the project directory, you can run:
+``` html
+<wc-button
+  html-type="button"
+  disabled={false}
+  loading={true}
+  theme="primary"
+  size="base"
+  block={true}
+>Button</wc-button>
+```
 
-### `yarn start`
+## output
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+``` html
+<wc-button
+  html-type="button"
+  disabled="false"
+  loading="true"
+  theme="primary"
+  size="base"
+  block="true"
+  class="hydrated"
+>
+  #shadow-root (open)
+    <button type="button" class="relative inline-flex items-center border border-transparent shadow-sm transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2, bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500 px-4 py-2 text-sm rounded-md flex flex-row justify-center w-full"><slot></slot><span class="absolute inset-y-0 right-0 flex flex-row justify-center items-center px-4"><svg class="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></span></button>
+  Button
+</wc-button>
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![](https://user-images.githubusercontent.com/51122255/128993166-2f71256c-95c4-467e-a4f0-e8bf02db5905.png)
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
